@@ -11,6 +11,20 @@
     <title>Lalita Chavan | UX Design Portfolio </title>
 </head>
 <body>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="/main.js"></script>
+
     <div class="wrapper">
             <!--Top navigation bar-->       
             <div class="navbar">
@@ -27,9 +41,11 @@
 
         <!--Main body-->
         <div class="body-content">
-            <div class="about">
-                <h1>Hi, I am Lalita</h1>
-                <p>I bring the creativity of design and the feasibility of engineering to create seamless user experiences.</p>
+            <div id="bio" class="about">
+                <div class="intro">
+                    <h1>Hi, I am Lalita</h1>
+                    <p>I bring the creativity of design and the feasibility of engineering to create seamless user experiences.</p>
+                </div>
             </div>
             <div class="projects">
                 <div class="project-wrapper" id="project-1">

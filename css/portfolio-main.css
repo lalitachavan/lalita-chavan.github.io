@@ -104,8 +104,13 @@ nav a:hover{
 
 .about{
     grid-row: 1;
-    align-self: center;
-    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.intro{
+    grid-column: 1;
 }
 
 /*Display projects one below the other*/
