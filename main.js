@@ -34,7 +34,7 @@ function init(){
 	controls.update();
 
     let loader = new GLTFLoader();
-    loader.load('nyc.glb', function(gltf){
+    loader.load('trees.glb', function(gltf){
         scene.add(gltf.scene);
         render();
     });
