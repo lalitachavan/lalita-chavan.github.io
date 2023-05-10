@@ -11,9 +11,10 @@ function init(){
 	document.getElementById('bio').appendChild( container );
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xdddddd);
+    scene.background = new THREE.Color( 0xffffff);
 
-    camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 5000 );
+    camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.25, 5000 );
+    camera.position.set( 60, 40, 70 );
 
     hlight = new THREE.AmbientLight( 0x404040, 100);
     scene.add(hlight);
@@ -23,7 +24,7 @@ function init(){
     scene.add(directionalLight);
 
     renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setSize(900, 700);
+    renderer.setSize(900, 600);
     renderer.setPixelRatio( window.devicePixelRatio );
 
     const controls = new OrbitControls( camera, renderer.domElement );
